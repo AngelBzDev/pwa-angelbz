@@ -122,5 +122,5 @@ async function programa() {
 }
 async function repiteLoop() {
   await loop();
-  setTimeout(repiteLoop, 10000);
+  setTimeout(repiteLoop, 1000);
 }
