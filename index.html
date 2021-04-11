@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-      content="width=device-width,
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
       initial-scale=1.0">
-    <title>Control IoT</title>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-    <script
-      src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
-    <script src="js/init.js">
-    </script>
-    <link href="css/estilos.css"
-      rel="stylesheet">
-    <script type="module"
-      src="cmp/mi-footer.js">
-      </script>
-  </head>
-  <body>
+  <title>Control IoT</title>
+
+  <!--CDN Material.io-->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+  <script src="js/init.js"></script>
+  <link href="css/estilos.css" rel="stylesheet">
+  <script type="module" src="cmp/mi-footer.js"></script>
+</head>
+
+<body>
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <span class="mdc-top-app-bar__title">PWA - IoT</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      </section>
+    </div>
+  </header>
+  <div class="container">
     <div class="contenido">
-      <h1>Control IoT</h1>
+      <h1 class="title">Control IoT</h1>
+      <div class="buttons">
+        <div class="mdc-touch-target-wrapper btn">
+          <a href="dispositivo.html" target="_blank" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">Ver dispositivo simulado</span>
+            <span class="mdc-button__touch"></span>
+          </a>
+        </div>
+        <div class="mdc-touch-target-wrapper btn">
+          <a href="historial.html" target="_blank" class="mdc-button mdc-button--touch">
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">Ver historial</span>
+            <span class="mdc-button__touch"></span>
+          </a>
+        </div>
+      </div>
+
       <p>
-        <a href="dispositivo.html"
-          target="_blank">Ver
-          dispositivo
-          simulado.</a>
-      </p>
-      <p>
-        <a href="historial.html"
-          target="_blank">Ver
-          historial.</a>
-      </p>
-      <p>
-        <label>
-          Dispositivo
-          <output
-            id="ctDispositivo">
-          </output>
+        <label>Dispositivo
+          <output id="ctDispositivo"></output>
         </label>
       </p>
       <p>
         <label>
           Entrada
-          <meter id="ctEntrada"
-            min="0" max="10">
+          <meter id="ctEntrada" min="0" max="10">
           </meter>
         </label>
       </p>
       <p>
         <label>
-          <input id=ctSalida
-            type="checkbox">
           Salida
+          <div class="mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox" class="mdc-checkbox__native-control" id=ctSalida />
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+              <div class="mdc-checkbox__ripple"></div>
+            </div>
+          </div>
         </label>
       </p>
       <mi-footer></mi-footer>
     </div>
-    <script type="module"
-      src="js/CtrlMovil.js">
-      </script>
-  </body>
+  </div>
+  <script type="module" src="js/CtrlMovil.js"></script>
+</body>
+
 </html>
