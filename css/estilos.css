@@ -43,6 +43,7 @@ mi-footer {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #ff7e67;
 }
 
 @media (min-width: 780px){
@@ -72,7 +73,22 @@ meter, input[type="range"]{
 }
 
 output{
-  color:blueviolet;
+  color: #ff7e67;
   font-weight: 600;
   font-size: 30px;
+}
+
+.mdc-top-app-bar{
+  background-color: #07689f;
+}
+
+.mdc-button:not(:disabled) {
+  background-color: #eeeeee;
+  border: 1px solid #07689f;
+  color: #07689f;
+}
+
+.mdc-button--raised:not(:disabled){
+  background-color: #07689f;
+  color: #fff;
 }
